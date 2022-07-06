@@ -1,0 +1,106 @@
+Aluno: Tomás de Farias Ribeiro Caldas
+Aula:05 do Módulo 2
+
+Código
+
+import numpy as np
+
+class NumeroComplexo:
+    '''Número complexo, com parte real e imaginária.
+    Pode ser construído a partir de coordenadas retangulares ou polares.
+    É possível realizar as quatro operações básicas:
+    Adição, subtração, multiplicação e divisão.'''
+    def __init__(self, tipo, a, b):
+        if tipo == 'r':
+            self.__real = a
+            self.__img = b
+            self.__rho = np.sqrt(a**2 + b**2)
+            self.__theta = np.arctan(b / a)
+        elif tipo == 'p':
+            self.__real = a * np.cos(b)
+            self.__img = a * np.sin(b)
+            self.__rho = a
+            self.__theta = b
+        else:
+            print('Primeiro parâmetro deve ser \'r\' ou \'p\'.')
+            
+    def show_ret(self):
+        print(f'Parte real: {self.__real}')
+        print(f'Parte imaginária: {self.__img}')
+    def show_pol(self):
+        print(f'Rho: {self.__rho}')
+        print(f'Theta: {self.__theta} rad')
+        
+    def get_real(self):
+        return self.__real
+    def get_img(self):
+        return self.__img
+    def get_rho(self):
+        return self.__rho
+    def get_theta(self):
+        return self.__theta
+    
+    def set_real(self, num):
+        self.__real = num
+        self.__rho = np.sqrt(self.__real**2 + self.__img**2)
+        self.__theta = np.arctan(self.__img / self.__real)
+    def set_img(self, num):
+        self.__img = num
+        self.__rho = np.sqrt(self.__real**2 + self.__img**2)
+        self.__theta = np.arctan(self.__img / self.__real)
+    def set_rho(self, num):
+        self.__rho = num
+        self.__real = self.__rho * np.cos(self.__theta)
+        self.__img = self.__rho * np.sin(self.__theta)
+    def set_theta(self, num):
+        self.__theta = num
+        self.__real = self.__rho * np.cos(self.__theta)
+        self.__img = self.__rho * np.sin(self.__theta)
+        
+    def soma(self, n2):
+        self.set_real(self.get_real() + n2.get_real())
+        self.set_img(self.get_img() + n2.get_img())
+        print('Resultado da soma:')
+        self.show_ret()
+        self.show_pol()
+    def sub(self, n2):
+        self.set_real(self.get_real() - n2.get_real())
+        self.set_img(self.get_img() - n2.get_img())
+        print('Resultado da subtração:')
+        self.show_ret()
+        self.show_pol()
+    def mult(self, n2):
+        self.set_rho(self.get_rho() * n2.get_rho())
+        self.set_theta(self.get_theta() + n2.get_theta())
+        print('Resultado da multiplicação:')
+        self.show_ret()
+        self.show_pol()
+    def div(self, n2):
+        self.set_rho(self.get_rho() / n2.get_rho())
+        self.set_theta(self.get_theta() - n2.get_theta())
+        print('Resultado da divisão:')
+        self.show_ret()
+        self.show_pol()
+
+n1 = NumeroComplexo('r', 3, 4)
+n2 = NumeroComplexo('p', 5, -0.9272952180016122)
+n3 = NumeroComplexo('r', -6, 8)
+
+print('Número 1:')
+n1.show_ret()
+n1.show_pol()
+print('Número 2:')
+n2.show_ret()
+n2.show_pol()
+print('Número 3:')
+n3.show_ret()
+n3.show_pol()
+
+print('Somando n2 a n1:')
+n1.soma(n2)
+print('Subtraindo n3 de n2:')
+n2.sub(n3)
+print('Multiplicando n3 por n1:')
+n3.mult(n1)
+print('Dividindo n1 por n2:')
+n1.div(n2)
