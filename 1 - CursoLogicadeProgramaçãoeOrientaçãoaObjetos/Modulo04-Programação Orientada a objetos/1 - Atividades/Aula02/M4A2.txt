@@ -1,0 +1,74 @@
+Aluno: Tomás de Farias Ribeiro Caldas
+Aula 02 do Módulo 04.
+
+Classifique dois objetos materiais e dois abstratos. Insira, no mínimo, três métodos e três atributos para cada.
+
+Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe o link no campo ao lado para que outros desenvolvedores possam analisá-lo. 
+
+
+Classe Caneta 
+
+     atributos:
+
+	marca: CARACTERE;
+	cor: CARACTERE;	
+	tampada: LOGICO;
+
+     métodos:
+
+	desenhar;
+	escrever;
+	pintar;
+
+*************************************
+Classe Avião
+
+     atributos:
+
+	Fabricante: CARACTERE;
+	modelo: CARACTERE;
+	ano: INTEIRO;
+     
+     métodos:
+	
+	pilotar;
+	planar;
+	acelerar;
+
+*************************************
+
+Classe Jogo
+
+    atributos:
+
+	fabricante: CARACTER; 
+	estilo: CARACTER; 
+	ANO: INTEIRO;
+    
+    métodos:
+
+	ANDAR;
+	ABAIXAR;
+	ATACAR;
+
+*************************************
+Classe TransacaoBancaria
+
+     atributos:
+
+	banco: CARACTERE;
+	transacao: CARACTERE;
+	valor: REAL;
+
+     métodos:
+
+	pagar;
+	receber;
+	emprestimo;
+
+
+
+
+
+
+      
