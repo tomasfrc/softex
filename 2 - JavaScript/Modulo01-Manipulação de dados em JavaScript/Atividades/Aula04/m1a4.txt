@@ -1,0 +1,16 @@
+Aluno: Tomás de Farias Ribeiro Caldas
+Aula 04 do modulo 1
+
+Cite três exemplos de dados utilizados no seu cotidiano (exemplo: termômetro) e pesquise três outros exemplos em que dados na internet são usados (exemplo: criação de um usuário em rede social digital).
+
+**Exemplos de Dados no Cotidiano**
+
+1- Semáforo (Boolean)
+2 - Calculadora (Number)
+3- Placas de trânsito com informações para chegar ao destino (String)
+
+**Exemplos de Dados na Internet**
+
+1 - Criação de usuário em redes sociais (Number, String e Boolean )
+2 - Veocidade do DownLoad de um link (Number)
+3 - Link de acesso ao curso da softex. (String)
