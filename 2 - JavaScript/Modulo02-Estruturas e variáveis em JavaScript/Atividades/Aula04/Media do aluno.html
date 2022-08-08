@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno - softex</title>
+</head>
+<body>
+    <div>
+        <h1>Aluno: Tomás de Farias Ribeiro Caldas</h1>
+        <h2>Atividade softex - Aula 3 do Módulo 2 de JS</h2>
+        
+        Primeira nota: <input type="number" id="nota1"> <br>
+        Segunda nota: <input type="number" id="nota2"> <br>
+        Terceira nota: <input type="number" id="nota3"> <br>
+        <button onclick="media()">Calcular média</button>
+    </div>
+
+    <script type= text/javascript>
+        function media(){
+
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+            var nota3 = parseFloat(document.getElementById("nota3").value)
+
+            var media = (nota1 + nota2 + nota3)/3
+
+            if (media >= 7) 
+                media == 10 ? alert("Parabéns!! você tirou 10 !!") : alert("Parabéns, você foi aprovado")
+            else    
+                alert("Você foi reprovado!!")          
+
+        }
+    </script>
+</body>
+</html>

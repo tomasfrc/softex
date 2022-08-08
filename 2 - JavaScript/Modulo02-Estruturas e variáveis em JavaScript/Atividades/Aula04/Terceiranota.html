@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno - softex</title>
+</head>
+<body>
+    <div>
+        <h1>Aluno: Tomás de Farias Ribeiro Caldas</h1>
+        <h2>Atividade softex - Aula 3 do Módulo 2 de JS</h2>
+        
+        Primeira nota: <input type="number" id="nota1"> <br>
+        Segunda nota: <input type="number" id="nota2"> <br>
+        Terceira nota: iremos Calcular <br>
+        <button onclick="nota3()">Calcular quanto você precisa tirar na terceira prova</button>
+    </div>
+
+    <script type= text/javascript>
+        function nota3(){
+
+            var nota1 = parseFloat(document.getElementById("nota1").value)
+            var nota2 = parseFloat(document.getElementById("nota2").value)
+
+            var notaNecessaria = 21
+
+            notaNecessaria -= (nota1 + nota2)
+
+            alert(`Sua terceira prova deve você deve tirar: ${notaNecessaria}`)
+        }
+    </script>
+</body>
+</html>
