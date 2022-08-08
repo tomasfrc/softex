@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Calculadora js- Softex</title>
+</head>
+<body>
+    
+    <script>
+        var primeiroValor = parseInt(prompt("Digite o primeiro valor: ")) 
+
+        do{
+            var operacao = prompt("Digite a operação matemática:")
+        } while(operacao != "+" && operacao != "-" && operacao != "/" && operacao != "*")
+
+        var segundoValor = parseInt(prompt("Digite o segundo valor: "))
+        
+        var resultado, resto = 0
+
+        switch (operacao){
+            case "+": 
+                resultado = primeiroValor + segundoValor
+                alert(resultado)
+                break
+
+            case "-": 
+                resultado = primeiroValor - segundoValor
+                alert(resultado)
+                break
+
+            case "/": 
+                resultado = Math.floor(primeiroValor / segundoValor) 
+                resto = primeiroValor % segundoValor
+                alert(`Quociente: ${resultado} Resto: ${resto}`)
+                break
+
+            case "*": 
+                resultado = primeiroValor * segundoValor
+                alert( resultado)
+                break
+        }
+
+    </script>
+
+</body>
+</html>
