@@ -1,0 +1,14 @@
+{
+  "name": "codigocomnodejs",
+  "version": "1.0.0",
+  "description": "Codigo para ser executado no node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tomás Caldas",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
