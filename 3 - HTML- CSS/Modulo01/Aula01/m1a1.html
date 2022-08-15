@@ -1,0 +1,126 @@
+
+<!--
+Aluno: Tomás de Farias Ribeiro Caldas
+    
+Crie exemplos de utilização das tags mais comuns na HTML: metadados, separação de conteúdo, texto, imagem e formulário. É necessário pelo menos dois exemplos de cada tipo.
+
+Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no campo ao lado para que outros desenvolvedores possam analisá-lo. -->
+
+
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Primeira Atividade HTML (M1A1)</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+                h1{
+                    text-align: center;
+                }
+                body{
+                    background-image: url(palmeiras.jpg);
+                    background-position: center;
+                    background-size: contain;
+                    color: aliceblue;
+                    font-family: 'DynaPuff', cursive;
+                }
+
+                .img{
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    justify-content: center;
+                }
+
+                img{    
+                    width: 200px;
+                }
+              
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    width: 300px;
+                }
+
+                input{
+                    margin-bottom: 10px;
+                }
+            </style>
+            
+        </head>
+    <body>
+        <h1>Sociedade Esportiva Palmeiras</h1>
+        <h2>A história do Palmeiras</h>
+        <p>O Palmeiras surgiu no dia 26 de agosto de 1914. Fundado por imigrantes italianos, seu primeiro nome foi Società Sportiva Palestra Italia. Em 1942, quando estava estabelecida como uma força do futebol paulista, a equipe foi obrigada a trocar de nome, passando a se chamar Sociedade Esportiva Palmeiras em decorrência da Segunda Guerra Mundial. O Palmeiras foi campeão paulista logo em sua primeira partida com o novo nome. Foram, ao todo, 22 títulos estaduais. Um dos times mais famosos da história do clube alviverde foi o chamado de "Academia de Futebol", das décadas de 1960 e 70, liderado por Ademir da Guia - um dos poucos elencos que faziam frente ao Santos de Pelé.</p>
+
+        <hr>
+        
+        <h2> Títulos </h2>
+        
+        <ul>
+            <li>
+                <p> 3 Copa Libertadores</p>
+            </li>
+            <li>
+                <p> 1 Copa Mercosul/p>
+            </li>
+            <li>
+                <p> 1 Recopa sul-americana</p>
+            </li>
+            <li>
+                <p> 10 Campeonato Brasileiro</p>
+            </li>
+            <li>
+                <p> 4 Copa do Brasil</p>
+            </li>
+        </ul>
+
+        <hr>
+        
+        <h2>Foto das taças</h2>
+          
+          <ul class="img">
+            <li>
+                <img src="Basileiro.png" alt="Taça da Libertadores">
+            </li>
+            <li>
+                <img src="Mercosul.png" alt="Copa Mercosul">
+            </li>
+            <li>
+                <img src="recopa.png" alt="sul-americana">
+            </li>
+            <li>
+                <img src="Basileiro.png" alt="Campeonato Brasileiro">
+            </li>
+            <li>
+                <img src="CopadoBrasil.png" alt="Copa do Brasil">
+            </li>
+          </ul> 
+
+          <hr>
+
+        
+          <form >
+
+            <h2>Entre em contato</h2>
+          
+            <label for="nome">Nome</label>
+            <input type="text" id="nomeid" placeholder="Porco" required="required" name="nome" />
+            
+            <label for="fone">Fone</label>
+            <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+            
+            <label for="email">Email</label>
+            <input type="email" id="emailid" placeholder="porco@gmail.com" name="email" />
+
+          
+            <textarea placeholder="Deixe sua opnião"></textarea>
+          
+            <input type="submit" class="enviar"; value="Enviar" />
+          </form>
+    </body>
+</html>
