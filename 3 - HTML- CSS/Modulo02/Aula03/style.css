@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
 
 *{
     margin: 0;
@@ -21,6 +22,9 @@ header{
     align-items: center;
     justify-content: space-between;
     padding-left: 25px 48px;
+    background: #1e1e7d;
+    padding-bottom: 12px;
+    box-shadow: 0 0 1em black;
 }
 
 .logo{
@@ -64,7 +68,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50em;
     margin-top: 1.5em;  
 }
 
@@ -73,6 +76,7 @@ main section{
     flex-direction: column;
     align-items: flex-start;
     margin-left: 2.5em;
+    align-items: center;
 
 }
 
@@ -83,63 +87,39 @@ main section .logomarco{
     box-shadow: 0 0 1em black;
 }
 
-main section .btn-box{
+main section .titulo{
     display: flex;
     align-items: center;
     gap: 20px;
+    font-size: 35px;
+    color: #1e1e7d;
 }
 
-.btn-box .btn{
-    padding: 20px 45px;
-    background: #425265;
-    color: white;
-    margin-bottom: 2em;
-    border-bottom: 2px solid white;
-    transition: all .3s;
-}
-
-.btn-box .btn:hover{
-    background: #2d3846;
-}
-
-.btn-box .btn:focus{
-    background: #2d3846;
-}
 
 main section .text{
-    color: white;
-    line-height: 22px;
+    color: #0e0e5a;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: center;
 }
-.btn-box2{
+
+h1 {
+    font-family: 'Rubik Distressed', cursive;
+}
+.fotos{
     display: flex;
-    align-items: center;
-    color: white;
-    background: #0f79af;
-    padding: 15px 45px;
+    color: #1e1e7d;
     margin-top: 2em ;
-    border-radius: 5px 5px 0 0;
-    border-bottom: 4px solid white;
     font-size: 25px;
     gap: 15px;
-    cursor: pointer;
-    transition: all .3s;
 }
 
-.btn-box2:hover{
-    background: #138ecc;
-}
-
-.btn-box2 .play{
-    width: 1.4em;
-    filter: invert(1);
-
-}
 
 footer .cards{
     display: flex;
     flex-flow: row;
     align-items: center;
-    margin-left: 23em;
+    margin-left: 35em;
     margin-top: 1.5em;
 }
 .cards .card{
