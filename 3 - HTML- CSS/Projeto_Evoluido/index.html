@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viva Recife</title>
+    <!-- Essa tag reseta as propriedades dos elementos  (pois esses elementos tem proprides pré finidas)-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Parte que carrega as fontes do projeto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Parte que carrega as fontes de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!--Estou utilizando a metodologia BEM,metodologia para nomeação de classes em CSS-->
+    <header id="home">
+      <nav class="navbar">
+        <nav class="navbar-header">
+          <img src="assets/logo.png" alt="Viva Recife" class="navbar-header__logo" />
+          <button type="button" class="navbar-header__toggle">
+            <i class="fas fa-bars"></i>
+            <!--Essa class vem do fontawesome, plugamos no head o link-->
+          </button>
+        </nav>
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-list__link">Home</a>
+          </li>
+          <li>
+            <a href="#sobre" class="navbar-list__link">Sobre Nós</a>
+          </li>
+          <li>
+            <a href="#diferenciais" class="navbar-list__link">Diferenciais</a>
+          </li>
+          <li>
+            <a href="#pacotes" class="navbar-list__link">Pacotes</a>
+          </li>
+          <li>
+            <a href="#galeria" class="navbar-list__link">Galeria</a>
+          </li>
+        </ul>
+        <ul class="navbar-icons">
+          <li>
+            <a href="https://www.twitter.com" target="_blank" class="navbar-icons__icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" class="navbar-icons__icon">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" class="navbar-icons__icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <video src="assets/meetMinas.mp4" autoplay muted loop class="hero__video"></video>
+        <div class="hero-texto">
+          <h1 class="hero-texto__titulo">
+            Conheça a Minas <br />
+            <span class="hero-texto__titulo--linha-2">Que os mineiros amam</span>
+          </h1>
+          <p class="hero-texto__descricao">Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo,mas ninguém vê os tombis que eu levo!</p>
+          <a href="#" class="hero-texto__cta">Explore</a>
+        </div>
+      </div>
+    </header>
+    <section id="sobre" class="sobre">
+      <h2 class="section__titulo">Sobre <span class="section-titulo--destaque">nós</span></h2>
+      <div class="sobre-c">
+        <img src="assets/sobre.png" alt="Sobre nós" class="sobre-c__img" />
+        <div class="sobre-texto">
+          <h3 class="sobre-texto__titulo">Uma nova maneira de viajar por minas</h3>
+          <p>
+            Mussum Ipsum, cacilds vidis litro abertis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! A ordem dos tratores não altera o pão duris.
+            Delegadis gente finis, bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.
+          </p>
+          <br />
+          <p>
+            Si num tem leite então bota uma pinga aí cumpadi! Diuretics paradis num copo é motivis de denguis. Interagi no mé, cursus quis, vehicula ac nisi. Tá deprimidis, eu
+            conheço uma cachacis que pode alegrar sua vidis.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--Arquivo de Script-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

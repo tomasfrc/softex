@@ -1,0 +1,365 @@
+/*Altera a forma que a altura e largura do elementos são calculadas, facilita ajustar os itens*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Estilos Gerais
+/* 2. Navbar
+/* 3. Hero
+/* 4. Sobre Nós
+/* 5. Diferenciais
+/* 6. Pacotes
+/* 7. Newsletter
+/* 8. Galeria
+/* 9. Footer
+/* 10. Modal
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+
+:root {
+  --ff-primary: "Cairo", sans-serif;
+
+  --clr-background: #f5f5f5;
+  --clr-background-blue: #1e1e7d;
+  --clr-white: #f1fcde;
+  --clr-black: #090e01;
+  --clr-light-green: #def8af;
+  --clr-medium-green: #88cc11;
+  --clr-dark-green: #456809;
+  --clr-light-blue: #1c1cc9;
+
+  --spacing: 0.25rem;
+  --transition: all 0.2s linear;
+  --dark-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+/**********************************/
+/* 1. Estilos Gerais
+/**********************************/
+html {
+  font-size: 62.5%; /*Coloquei essa propriedade para facilitar o uso da unidade de medida rem*/
+}
+
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-background);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+section {
+  min-width: 37rem;
+  padding: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section__titulo {
+  font-size: 4.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  text-align: center;
+}
+
+.section-titulo--destaque {
+  color: var(--clr-dark-green);
+}
+
+@media screen and (min-width: 1170px) {
+  section {
+    padding: 1.6rem calc((100% - 117rem - 1.6rem) / 2);
+  }
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+.navbar {
+  position: fixed;
+  background: var(--clr-background-blue);
+  width: 100%;
+  padding: 1.6rem;
+  box-shadow: var(--dark-shadow);
+  z-index: 3;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-header__logo {
+  width: 9.3rem;
+} /* -------------*/
+
+.navbar-header__toggle {
+  background-color: transparent;
+  border: transparent;
+  font-size: 3.2rem;
+  color: var(--clr-white);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.navbar-header__toggle:hover {
+  transform: scale(1.2);
+}
+
+.navbar-list {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.navbar-list--show--links {
+  height: 25rem;
+}
+
+.navbar-list__link {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+  padding: 1.6rem;
+  text-transform: capitalize;
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+
+.navbar-list__link:hover {
+  background: var(--clr-light-blue);
+  padding-left: 3.6rem;
+}
+
+.navbar-icons {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-header__toggle {
+    display: none;
+  }
+
+  .navbar-list {
+    height: auto;
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .navbar-list__link:hover {
+    background: none;
+    padding-left: 1.6rem;
+    color: var(--clr-medium-green);
+  }
+
+  .navbar-icons {
+    display: flex;
+  }
+
+  .navbar-icons__icon {
+    margin-left: 1.6rem;
+    color: var(--clr-white);
+    font-size: 1.8rem;
+    font-weight: 900;
+    transition: var(--transition);
+  }
+
+  .navbar-icons__icon:hover {
+    color: var(--clr-medium-green);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .navbar {
+    padding: 0.8rem calc((100% - 117rem - 1.6rem) / 2);
+  }
+}
+
+/**********************************/
+/* 3. Hero
+/**********************************/
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-texto {
+  min-width: 37rem;
+  padding: 1.6rem;
+}
+
+.hero-texto__titulo {
+  font-size: 5.2rem;
+  font-weight: 900;
+  color: var(--clr-white);
+  text-transform: uppercase;
+  text-shadow: 1px 0 4px black;
+}
+
+.hero-texto__descricao {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  max-width: 57rem;
+  margin: 1rem 0;
+  text-shadow: 1px 0 4px black;
+}
+
+.hero-texto__cta {
+  display: block;
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  width: 27rem;
+  text-align: center;
+  background: var(--clr-medium-green);
+  padding: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: var(--transition);
+}
+
+.hero-texto__cta:hover {
+  letter-spacing: 0.6rem;
+}
+
+/*@media (max-width: 470px) {
+  .hero-texto {
+    text-align: center;
+  }
+
+  .hero-texto__titulo {
+    font-size: 3.2rem;
+  }
+  .hero-texto__descricao {
+    font-size: 1.7rem;
+  }
+  .hero-texto {
+    min-width: 27rem;
+    padding: 1.6rem;
+  }
+
+  .hero-texto__cta {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--clr-white);
+    width: 11rem;
+    text-align: center;
+    padding: 1.6rem;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+}*/
+
+@media screen and (min-width: 960px) {
+  .hero-texto__titulo {
+    font-size: 7.2rem;
+  }
+  .hero-texto__titulo--linha-2 {
+    font-size: 6.4rem;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .hero-texto {
+    padding: 1.6rem calc((100% - 117rem - 1.6rem) / 2); /*Forma de centralizar*/
+  }
+}
+
+/**********************************/
+/* 4. Sobre Nós
+/**********************************/
+.sobre-texto {
+  margin-top: 1.6rem;
+}
+
+.sobre-texto__titulo {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sobre-c {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .sobre-texto {
+    flex: 6 1 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .sobre-c__img {
+    flex: 1 1 1rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .sobre {
+    height: 100vh;
+  }
+}
+
+/**********************************/
+/* 5. Diferenciais
+/**********************************/
+
+/**********************************/
+/* 6. Pacotes 
+/**********************************/
+
+/**********************************/
+/* 7. Newsletter
+/**********************************/
+
+/**********************************/
+/* 8. Galeria
+/**********************************/
+
+/**********************************/
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 10. Modal
+/**********************************/
