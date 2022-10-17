@@ -1,4 +1,4 @@
-# Calling a SOAP web service from Java client
+# Chamando um serviço da web SOAP do cliente Java
 
-This is a simple Java application with no user interface, the output all goes to the console.  The only purpose of this program is to prove that we can consume the web service.
+Este é um aplicativo Java simples sem interface de usuário, a saída vai para o console. O único propósito deste programa é provar que podemos consumir o serviço web.
 
